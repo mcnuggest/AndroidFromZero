@@ -5,7 +5,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeActivity extends AppCompatActivity {
+
+    private List<HomeButton> homeButtons = new ArrayList<HomeButton>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,4 +39,8 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
+
