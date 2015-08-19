@@ -10,14 +10,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mcnuggest.myapplication.AutoCompleteEditView.AutoCompleteEditViewActivity;
+import com.example.mcnuggest.myapplication.CheckBox.CheckBoxActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-//    private List<HomeButton> homeButtons = new ArrayList<HomeButton>();
-    private Button dongtaizidongpipei ;
+    //    private List<HomeButton> homeButtons = new ArrayList<HomeButton>();
+    private Button dongtaizidongpipei;
+    private Button checkboxbutton;
     private Context mContext = this;
 
     @Override
@@ -25,12 +27,21 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         dongtaizidongpipei = (Button) findViewById(R.id.dongtaizidongpipei);
+        checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
+        checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
         dongtaizidongpipei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,AutoCompleteEditViewActivity.class);
+                Intent intent = new Intent(mContext, AutoCompleteEditViewActivity.class);
                 startActivity(intent);
 
+            }
+        });
+        checkboxbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, CheckBoxActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -57,7 +68,6 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }
