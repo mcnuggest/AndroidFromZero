@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mcnuggest.myapplication.AutoCompleteEditView.AutoCompleteEditViewActivity;
+import com.example.mcnuggest.myapplication.Calculater.Calculater;
 import com.example.mcnuggest.myapplication.CheckBox.CheckBoxActivity;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     //    private List<HomeButton> homeButtons = new ArrayList<HomeButton>();
     private Button dongtaizidongpipei;
     private Button checkboxbutton;
+    private Button jisuanji;
     private Context mContext = this;
 
     @Override
@@ -29,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         dongtaizidongpipei = (Button) findViewById(R.id.dongtaizidongpipei);
         checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
         checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
+        jisuanji = (Button) findViewById(R.id.jisuanji);
         dongtaizidongpipei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +44,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, CheckBoxActivity.class);
+                startActivity(intent);
+            }
+        });
+        jisuanji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, Calculater.class);
                 startActivity(intent);
             }
         });

@@ -27,4 +27,13 @@
         android:layout_below="@+id/dongtaizidongpipei"
         android:text="checkbox多选效果" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算器"
+        android:id="@+id/jisuanji"
+        android:layout_below="@+id/checkboxbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
