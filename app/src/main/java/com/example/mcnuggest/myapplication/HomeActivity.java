@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.example.mcnuggest.myapplication.AutoCompleteEditView.AutoCompleteEditViewActivity;
 import com.example.mcnuggest.myapplication.Calculater.Calculater;
 import com.example.mcnuggest.myapplication.CheckBox.CheckBoxActivity;
+import com.example.mcnuggest.myapplication.DataandTime.DateandTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button dongtaizidongpipei;
     private Button checkboxbutton;
     private Button jisuanji;
+    private Button dataandtime;
     private Context mContext = this;
 
     @Override
@@ -32,6 +34,14 @@ public class HomeActivity extends AppCompatActivity {
         checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
         checkboxbutton = (Button) findViewById(R.id.checkboxbutton);
         jisuanji = (Button) findViewById(R.id.jisuanji);
+        dataandtime = (Button)findViewById(R.id.dataandtime);
+        dataandtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, DateandTime.class);
+                startActivity(intent);
+            }
+        });
         dongtaizidongpipei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
